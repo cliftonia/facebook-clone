@@ -7,7 +7,7 @@ import { FacebookGuard } from './guards/facebook.guard';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./components/home/home.module').then(m: (HomeModule: HomeModule) => m.HomeModule),
+    loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule),
     canActivate: [FacebookGuard]
   },
   {
